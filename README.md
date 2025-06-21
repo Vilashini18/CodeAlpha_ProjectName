@@ -1,4 +1,4 @@
-# CodeAlpha_ProjectName
+# CodeAlpha_Webscraping
 
 ## Web Scraping Quotes - Data Analytics Internship Task
 
