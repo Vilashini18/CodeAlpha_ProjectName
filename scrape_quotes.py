@@ -2,17 +2,16 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# Step 1: Send request
+
 url = "https://quotes.toscrape.com/"
 headers = {
     "User-Agent": "Mozilla/5.0"
 }
 response = requests.get(url, headers=headers)
 
-# Step 2: Parse HTML content
 soup = BeautifulSoup(response.text, 'html.parser')
 
-# Step 3: Extract data
+
 quotes = []
 authors = []
 
@@ -23,7 +22,7 @@ for quote_block in soup.find_all('div', class_='quote'):
     quotes.append(text)
     authors.append(author)
 
-# Step 4: Save to CSV
+
 df = pd.DataFrame({
     'Quote': quotes,
     'Author': authors
